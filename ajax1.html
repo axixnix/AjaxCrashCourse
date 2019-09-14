@@ -17,7 +17,19 @@
         var xhr = new XMLHttpRequest();
         //open - type,url/file,async
         xhr.open("GET", "sample.txt", true);
+
+        xhr.onload = function() {
+          if (this.status == 200) {
+            console.log(this.responseText);
+          }
+        };
+
+        xhr.send();
       }
+      //http statuses
+      //200: "ok"
+      //403: "forbidden"
+      //404: "not found"
     </script>
   </body>
 </html>
