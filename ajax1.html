@@ -9,6 +9,8 @@
   <body>
     <!--ajax-->
     <button id="button">Get Text File</button>
+    <br /><br />
+    <div id="text"></div>
     <script>
       //create event listener
       document.getElementById("button").addEventListener("click", loadText);
@@ -19,12 +21,13 @@
         xhr.open("GET", "sample.txt", true);
 
         xhr.onprogress = function() {
-          console.log("READY STATE :", xhr.readyState);
+          console.log("READY STATE :", xhr.readyState); //you won't need this unless you want some kind of loader
         };
 
         xhr.onload = function() {
           if (this.status == 200) {
-            console.log(this.responseText);
+            // console.log(this.responseText);
+            document.getElementById("text").innerHTML = this.responseText;
           }
         };
 
