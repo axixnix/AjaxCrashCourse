@@ -19,15 +19,19 @@
         var xhr = new XMLHttpRequest();
         //open - type,url/file,async
         xhr.open("GET", "sample.txt", true);
+        console.log("READY STATE :", xhr.readyState);
 
         xhr.onprogress = function() {
           console.log("READY STATE :", xhr.readyState); //you won't need this unless you want some kind of loader
         };
 
         xhr.onload = function() {
+          console.log("READY STATE :", xhr.readyState);
           if (this.status == 200) {
             // console.log(this.responseText);
             document.getElementById("text").innerHTML = this.responseText;
+          } else if (this.status == 404) {
+            document.getElementById("text").innerHTML = "Not found!";
           }
         };
 
