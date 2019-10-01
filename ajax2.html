@@ -45,6 +45,36 @@
 
         xhr.send();
       }
+    
+      function loadUsers() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "users.json", true);
+
+        xhr.onload = function() {
+          if (this.status == 200) {
+            var user = JSON.parse(this.responseText); //if I don't do this things like user.name don't work...you must parse it to json
+            var output = "";
+            output +=
+              "<ul>" +
+              "<li>ID: " +
+              user.id +
+              "</li>" +
+              "<li>Name: " +
+              user.name +
+              "</li>" +
+              "<li>Email: " +
+              user.email +
+              "</li>" +
+              "</ul>";
+
+            document.getElementById("users").innerHTML = output;
+          }
+        };
+
+        xhr.send();
+      }
+
+      
     </script>
   </body>
 </html>
