@@ -13,7 +13,7 @@
 
       function getName() {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "proces.php?name=Brad", true);
+        xhr.open("GET", "proces.php?name=Brad", true); //the '?' here is needed because we are sending a variable to process.php
 
         xhr.onload = function() {
           console.log(this.responseText);
