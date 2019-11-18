@@ -18,12 +18,14 @@
 
     <h1>AJAX GET FORM</h1>
     <form id="getForm">
-      <input type="text" name="name" id="name" />
+      <input type="text" name="name" id="name1" />
       <input type="submit" value="submit" />
     </form>
 
     <script>
       document.getElementById("button").addEventListener("click", getName);
+
+      document.getElementById("getForm").addEventListener("submit", getName);
 
       function getName() {
         var xhr = new XMLHttpRequest();
