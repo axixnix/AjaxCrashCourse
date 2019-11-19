@@ -28,6 +28,10 @@
       document.getElementById("getForm").addEventListener("submit", getName);
 
       function getName() {
+        e.preventDefault();
+
+        var name = document.getElementById("name1").value;
+
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "proces.php?name=Brad", true); //the '?' here is needed because we are sending a variable to process.php
 
