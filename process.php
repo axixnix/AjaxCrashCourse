@@ -3,7 +3,7 @@ echo 'processing...';
 
 //check for POST variable
 if(isset($_POST['name'])){
-    echo 'POST: your name is' . $_GET['name'];
+    echo 'POST: your name is' . $_POST['name'];
 }
 
 //check for get variable
