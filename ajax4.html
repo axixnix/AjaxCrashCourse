@@ -65,7 +65,10 @@
         //xhr.open("GET", "proces.php?name=Brad", true); //the '?' here is needed because we are sending a variable to process.php
         xhr.open("POST", "proces.php", true); //ajax versions
 
-        xhr.setRequestHeader('Content-type','application/')
+        xhr.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
         xhr.onload = function() {
           console.log(this.responseText);
         };
