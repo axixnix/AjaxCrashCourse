@@ -1,5 +1,6 @@
 <?php
 //connect to a database
+$conn =mysqli_connect();
 
 echo 'processing...';
 
