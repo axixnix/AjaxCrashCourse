@@ -6,7 +6,7 @@ echo 'processing...';
 
 //check for POST variable
 if(isset($_POST['name'])){
-    $name = mysqli_real_escape_string();
+    $name = mysqli_real_escape_string($conn);
     echo 'POST: your name is' . $_POST['name'];
 }
 
