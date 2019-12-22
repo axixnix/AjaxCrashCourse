@@ -8,6 +8,9 @@ echo 'processing...';
 if(isset($_POST['name'])){
     $name = mysqli_real_escape_string($conn,$_POST['name']);
     echo 'POST: your name is' . $_POST['name'];
+
+    $
+
 }
 
 //check for get variable
